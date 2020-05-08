@@ -29,8 +29,8 @@ Few things to note:
       
 2. You should add the following to your Caddyfile as the [tls directive](https://caddyserver.com/docs/caddyfile/directives/tls#tls): 
 
-```
-tls {env.CLOUDFLARE_EMAIL} { 
-  dns cloudflare {env.CLOUDFLARE_API_TOKEN}
-}
-```
+   ```
+   tls {env.CLOUDFLARE_EMAIL} { 
+     dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+   }
+   ```
