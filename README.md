@@ -15,7 +15,7 @@ Few things to note:
         -v $PWD/Caddyfile:/etc/caddy/Caddyfile \
         -e CLOUDFLARE_EMAIL=me@example.com \
         -e CLOUDFLARE_API_TOKEN=12345 \
-        -e ACME_AGREE \
+        -e ACME_AGREE=true \
         slothcroissant/caddy-cloudflaredns 
       ```
       
