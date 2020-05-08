@@ -27,7 +27,7 @@ Few things to note:
       * Zone / Zone / Read
       * Zone / DNS / Edit
       
-2. You should add the following to your Caddyfile as the [tls directive](https://caddyserver.com/docs/caddyfile/directives/tls#tls). Note that I haven't figured out why the env.variable for the email address works, so for now I've got it manually declared: 
+2. You should add the following to your Caddyfile as the [tls directive](https://caddyserver.com/docs/caddyfile/directives/tls#tls). Note that I haven't figured out why the using `{env.CLOUDFLARE_EMAIL}` for the email address didn't work, so for now I've got it manually declared:
 
    ```
    tls me@example.com { 
