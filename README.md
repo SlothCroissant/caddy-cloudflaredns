@@ -16,7 +16,7 @@ Few things to note:
         -e CLOUDFLARE_EMAIL=me@example.com \
         -e CLOUDFLARE_API_TOKEN=12345 \
         -e ACME_AGREE=true \
-        slothcroissant/caddy-cloudflaredns 
+        slothcroissant/caddy-cloudflaredns:latest
       ```
       
       You can obtain your [Cloudflare API token](https://support.cloudflare.com/hc/en-us/articles/200167836-Managing-API-Tokens-and-Keys) via the Cloudflare Portal. To create a API token with minimal scope, the following steps are needed:
@@ -34,3 +34,7 @@ Few things to note:
      dns cloudflare {env.CLOUDFLARE_API_TOKEN}
    }
    ```
+
+3. This image now supports tagging! [See available tags here](https://hub.docker.com/r/slothcroissant/caddy-cloudflaredns/tags). To select a specific version of `caddy`, set your [Docker image tag](https://docs.docker.com/engine/reference/run/#imagetag) to the caddy version you'd like to use. 
+
+   Example: `slothcroissant/caddy-cloudflaredns:2.4.3`
