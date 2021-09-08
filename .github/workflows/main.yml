@@ -30,4 +30,4 @@ jobs:
       - name: Build
         shell: pwsh
         run: |
-          .\build.ps1
+          .\.github\workflows\caddyBuilder.ps1
