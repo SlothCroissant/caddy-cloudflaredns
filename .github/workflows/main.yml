@@ -5,10 +5,7 @@ name: Docker Build & Push
 on:
   push:
     tags:        
-      - '*'           # Push events to every tag not containing /
-  pull_request:
-    types:
-      - closed
+      - '*'
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
 
 env:
@@ -18,7 +15,6 @@ env:
 
 jobs:
   build:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
