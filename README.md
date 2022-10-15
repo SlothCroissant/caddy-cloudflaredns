@@ -27,11 +27,11 @@ Few things to note:
       * Zone / Zone / Read
       * Zone / DNS / Edit
       
-2. You should add the following to your Caddyfile as the [tls directive](https://caddyserver.com/docs/caddyfile/directives/tls#tls). Note that I haven't figured out why the using `{env.CLOUDFLARE_EMAIL}` for the email address didn't work, so for now I've got it manually declared:
+2. You should add the following to your Caddyfile as the [tls directive](https://caddyserver.com/docs/caddyfile/directives/tls#tls). 
 
    ```
-   tls me@example.com { 
-     dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+   tls {$CLOUDFLARE_EMAIL} { 
+     dns cloudflare {$CLOUDFLARE_API_TOKEN}
    }
    ```
 
