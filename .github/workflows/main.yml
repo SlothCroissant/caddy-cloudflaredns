@@ -11,7 +11,7 @@ on:
 env:
   DOCKER_USERNAME: slothcroissant
   DOCKER_CONTAINER_NAME: caddy-cloudflaredns
-  DOCKER_TARGET_PLATFORM: linux/amd64
+  DOCKER_TARGET_PLATFORM: linux/amd64, linux/arm64, linux/arm/v8, linux/arm/v7
 
 jobs:
   build:
@@ -52,7 +52,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: .
-        platforms: ${{ steps.prepare.outputs.docker_platform }}
+        platforms: ${{ env.DOCKER_TARGET_PLATFORM }}
         push: true
         tags: |
           ${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_CONTAINER_NAME }}:${{ steps.prepare.outputs.tag }}
