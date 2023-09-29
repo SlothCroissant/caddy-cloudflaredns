@@ -8,9 +8,8 @@ Please see the official [Caddy Docker Image](https://hub.docker.com/_/caddy) for
 
 Builds are available at the following Docker repositories:
 
-* Docker Hub: [docker.io/slothcroissant/caddy-cloudflaredns](https://hub.docker.com/r/slothcroissant/caddy-cloudflaredns)
-* GitHub Container Registry: [ghcr.io/slothcroissant/caddy-cloudflaredns](https://ghcr.io/slothcroissant/caddy-cloudflaredns)
-* Quay Container Registry: [quay.io/slothcroissant/caddy-cloudflaredns](https://quay.io/repository/slothcroissant/caddy-cloudflaredns)
+* Docker Hub: [docker.io/knutle/caddy-cloudflaredns](https://hub.docker.com/r/knutle/caddy-cloudflaredns)
+* GitHub Container Registry: [ghcr.io/knutle/caddy-cloudflaredns](https://ghcr.io/knutle/caddy-cloudflaredns)
 
 Few things to note: 
 
@@ -26,7 +25,7 @@ Few things to note:
         -e CLOUDFLARE_EMAIL=me@example.com \
         -e CLOUDFLARE_API_TOKEN=12345 \
         -e ACME_AGREE=true \
-        slothcroissant/caddy-cloudflaredns:latest
+        knutle/caddy-cloudflaredns:latest
       ```
       
       You can obtain your [Cloudflare API token](https://support.cloudflare.com/hc/en-us/articles/200167836-Managing-API-Tokens-and-Keys) via the Cloudflare Portal. To create a API token with minimal scope, the following steps are needed:
@@ -45,15 +44,15 @@ Few things to note:
    }
    ```
 
-3. This image now supports tagging! [See available tags here](https://hub.docker.com/r/slothcroissant/caddy-cloudflaredns/tags). To select a specific version of `caddy`, set your [Docker image tag](https://docs.docker.com/engine/reference/run/#imagetag) to the caddy version you'd like to use. 
+3. This image now supports tagging! [See available tags here](https://hub.docker.com/r/knutle/caddy-cloudflaredns/tags). To select a specific version of `caddy`, set your [Docker image tag](https://docs.docker.com/engine/reference/run/#imagetag) to the caddy version you'd like to use. 
 
-   Example: `slothcroissant/caddy-cloudflaredns:2.4.3`
+   Example: `knutle/caddy-cloudflaredns:2.4.3`
 
-[version-image]: https://img.shields.io/github/v/release/SlothCroissant/caddy-cloudflaredns?style=for-the-badge
-[version-url]: https://github.com/SlothCroissant/caddy-cloudflaredns/releases
+[version-image]: https://img.shields.io/github/v/release/knutle/caddy-cloudflaredns?style=for-the-badge
+[version-url]: https://github.com/knutle/caddy-cloudflaredns/releases
 
-[gh-actions-image]: https://img.shields.io/github/actions/workflow/status/SlothCroissant/caddy-cloudflaredns/main.yml?style=for-the-badge
-[gh-actions-url]: https://github.com/SlothCroissant/caddy-cloudflaredns/actions
+[gh-actions-image]: https://img.shields.io/github/actions/workflow/status/knutle/caddy-cloudflaredns/main.yml?style=for-the-badge
+[gh-actions-url]: https://github.com/knutle/caddy-cloudflaredns/actions
 
-[dockerhub-image]: https://img.shields.io/docker/pulls/slothcroissant/caddy-cloudflaredns?label=DockerHub%20Pulls&style=for-the-badge
-[dockerhub-url]: https://hub.docker.com/r/slothcroissant/caddy-cloudflaredns
+[dockerhub-image]: https://img.shields.io/docker/pulls/knutle/caddy-cloudflaredns?label=DockerHub%20Pulls&style=for-the-badge
+[dockerhub-url]: https://hub.docker.com/r/knutle/caddy-cloudflaredns

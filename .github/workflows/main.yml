@@ -9,7 +9,7 @@ on:
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
 
 env:
-  DOCKER_USERNAME: slothcroissant
+  DOCKER_USERNAME: knutle
   DOCKER_CONTAINER_NAME: caddy-cloudflaredns
   DOCKER_TARGET_PLATFORM: linux/amd64, linux/arm64, linux/arm/v8, linux/arm/v7
 
@@ -47,13 +47,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Login to Quay Container Registry
-        uses: docker/login-action@v2
-        with:
-          registry: quay.io
-          username: ${{ env.DOCKER_USERNAME }}+pushbot
-          password: ${{ secrets.QUAY_TOKEN }}
-
       - name: Build container and Push
         uses: docker/build-push-action@v3
         with:
@@ -65,5 +58,3 @@ jobs:
             ${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_CONTAINER_NAME }}:latest
             ghcr.io/${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_CONTAINER_NAME }}:${{ steps.prepare.outputs.tag }}
             ghcr.io/${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_CONTAINER_NAME }}:latest
-            quay.io/${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_CONTAINER_NAME }}:${{ steps.prepare.outputs.tag }}
-            quay.io/${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_CONTAINER_NAME }}:latest
