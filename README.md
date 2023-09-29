@@ -2,7 +2,7 @@
 [![caddy on DockerHub][dockerhub-image]][dockerhub-url]
 [![Docker Build][gh-actions-image]][gh-actions-url]
 
-# caddy-cloudflaredns
+# caddy-cloudflaredns .
 
 Please see the official [Caddy Docker Image](https://hub.docker.com/_/caddy) for deployment instructions.
 
