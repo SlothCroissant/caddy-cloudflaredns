@@ -1,0 +1,30 @@
+version: "3.7"
+
+#
+# These environment variables must be set and the token needs read/write access in the DNS zone we will be generating certs for:
+#
+# CLOUDFLARE_EMAIL=you@domain.com
+# CLOUDFLARE_API_TOKEN=cf_***
+#
+
+services:
+  caddy:
+    image: knutle/caddy-cloudflaredns:latest
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./site:/srv
+      - caddy_data:/data
+      - caddy_config:/config
+    environment:
+      - CLOUDFLARE_EMAIL=${CLOUDFLARE_EMAIL}
+      - CLOUDFLARE_API_TOKEN=${CLOUDFLARE_API_TOKEN}
+      - ACME_AGREE=true
+
+volumes:
+  caddy_data:
+  caddy_config:
