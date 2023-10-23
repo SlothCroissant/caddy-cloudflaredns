@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         if: ${{ !github.event.act }} # skip during local actions testing
 
       - name: Set up QEMU
