@@ -4,8 +4,8 @@ name: Docker Build & Push
 
 on:
   push:
-    tags:
-      - "*"
+    paths:
+      - 'Dockerfile'
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
 
 env:
