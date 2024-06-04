@@ -4,6 +4,8 @@ name: Docker Build & Push
 
 on:
   push:
+    branches:
+      - master
     paths:
       - 'Dockerfile'
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
