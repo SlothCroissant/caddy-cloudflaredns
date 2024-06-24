@@ -57,7 +57,7 @@ jobs:
           password: ${{ secrets.QUAY_TOKEN }}
 
       - name: Build container and Push
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           platforms: ${{ env.DOCKER_TARGET_PLATFORM }}
