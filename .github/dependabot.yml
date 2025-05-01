@@ -6,11 +6,11 @@ updates:
     schedule:
       interval: "weekly"
     assignees:
-      - "SlothCroissant"
+      - "silycr"
   # Check for docker image updates
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
       interval: "daily"
     assignees:
-      - "SlothCroissant"
+      - "silycr"
