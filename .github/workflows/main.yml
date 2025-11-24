@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         if: ${{ !github.event.act }} # skip during local actions testing
         with:
           fetch-depth: '0'
